@@ -1,5 +1,7 @@
 [![Build Status](https://dev.azure.com/TailspinGamesCompany/Space%20Game%20-%20web%20app/_apis/build/status/Vitreous.mslearn-tailspin-spacegame-web?branchName=master)](https://dev.azure.com/TailspinGamesCompany/Space%20Game%20-%20web%20app/_build/latest?definitionId=1&branchName=master)
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=SpaceGame-SonarCloud&metric=alert_status)](https://sonarcloud.io/dashboard?id=SpaceGame-SonarCloud)
+
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
