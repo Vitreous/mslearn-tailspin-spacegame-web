@@ -29,6 +29,9 @@ namespace Tests
         [TestCase("Pinwheel")]
         [TestCase("NGC 1300")]
         [TestCase("Messier 82")]
+        [TestCase("Ring Nebula")]
+
+        
         public void FetchOnlyRequestedGameRegion(string gameRegion)
         {
             const int PAGE = 0; // take the first page of results
