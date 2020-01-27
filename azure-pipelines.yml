@@ -109,7 +109,10 @@ steps:
     arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
     zipAfterPublish: true
 
-
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: '##vso[artifact.upload containerfolder=testresult;artifactname=uploadedresult;]README.md'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
