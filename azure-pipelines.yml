@@ -14,6 +14,21 @@ steps:
   inputs:
     version: '$(dotnetSdkVersion)'
 
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      Write-Host "Begin a lengthy process..."
+      $i=0
+      While ($i -le 100)
+      {
+         Start-Sleep 1
+         Write-Host "##vso[task.setprogress value=$i;]Sample Progress Indicator"
+         $i += 10
+      }
+      Write-Host "Lengthy process is complete."
+
+
 - task: Npm@1
   displayName: 'Run npm install'
   inputs:
@@ -93,6 +108,8 @@ steps:
     publishWebProjects: false
     arguments: '--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)'
     zipAfterPublish: true
+
+
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
